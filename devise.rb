@@ -73,7 +73,7 @@ end
 ########################################
 run "rm -rf app/assets/stylesheets"
 run "curl -L https://github.com/xlanex6/rails-stylesheets-sass/archive/master.zip > stylesheets.zip"
-run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-sass app/assets/stylesheets"
+run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-sass-master app/assets/stylesheets"
 
 run 'rm app/assets/javascripts/application.js'
 file 'app/assets/javascripts/application.js', <<-JS
