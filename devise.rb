@@ -176,7 +176,6 @@ TXT
   ########################################
   generate('devise:install')
   generate('devise', 'User')
-  generate('devise:views')
 
   # Browser Sync
   ########################################
