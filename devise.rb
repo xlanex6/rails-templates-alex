@@ -176,6 +176,7 @@ TXT
   # Devie install + user
   ########################################
   generate('devise:install')
+  generate('devise:views')
   generate('devise', 'User')
 
   # Browser Sync
