@@ -22,7 +22,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
-gem 'devise-bootstrap-views'
+gem 'devise-bootstrap-views', '~> 0.0.11'
 
 group :development, :test do
   gem 'binding_of_caller'
