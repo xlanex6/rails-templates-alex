@@ -22,6 +22,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'devise-bootstrap-views'
 
 group :development, :test do
   gem 'binding_of_caller'
@@ -72,7 +73,7 @@ end
 ########################################
 run "rm -rf app/assets/stylesheets"
 run "curl -L https://github.com/xlanex6/rails-stylesheets-sass/archive/master.zip > stylesheets.zip"
-run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets"
+run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-sass app/assets/stylesheets"
 
 run 'rm app/assets/javascripts/application.js'
 file 'app/assets/javascripts/application.js', <<-JS
@@ -93,7 +94,7 @@ file 'app/views/layouts/application.html.erb', <<-HTML
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO</title>
+    <title>Rails App</title>
     <%= csrf_meta_tags %>
     #{Rails.version >= "5" ? "<%= action_cable_meta_tag %>" : nil}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,7 +131,7 @@ run "curl -L https://raw.githubusercontent.com/lewagon/design/master/logos/png/l
 # README
 ########################################
 markdown_file_content = <<-MARKDOWN
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), and custom from Alex DUVAL.
 MARKDOWN
 file 'README.md', markdown_file_content, force: true
 
